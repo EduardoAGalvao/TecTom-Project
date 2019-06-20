@@ -1,0 +1,949 @@
+/*Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Classes para padronização*/
+/*Cores*/
+/*
+Azul: #24048C;
+Padrão - Bege: #D96E11;
+Verde: #28DF33;
+Marrom escuro: #8C4F19
+*/
+
+.background{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.conteudo{
+  width: 1400px;
+  height: inherit;
+  color: #ffffff;
+}
+
+section{
+  width: inherit;
+  min-height: 50px;
+  height: auto;
+  overflow: hidden;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2{
+  display: inline-block;
+  width: auto;
+  height: 60px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  font-family: 'Unica One', cursive;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  color: black;
+}
+
+h1{
+  font-size: 28px;
+}
+
+h2{
+  font-size: 24px;
+}
+
+p, li, a, button{
+  font-family: 'Titillium Web', sans-serif;
+}
+
+p{
+  width: inherit;
+  min-height: 15px;
+  height: auto;
+  padding: 15px;
+  font-size: 16px;
+  color: #000000;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+p, li{
+  line-height: 2;
+}
+
+.botao_matricula{
+  height: 50px;
+  width: 170px;
+  text-align: center;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  background-color: #137219;
+  border: 2px solid #137219; 
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.botao_matricula:hover{ 
+  background-color: white;
+  color: #137219;
+  font-weight: bold;
+  transition: 1s;
+  cursor: pointer;
+}
+
+
+.botao_enviar{
+  height: 60px;
+  width: 200px;
+  text-align: center;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  background-color: #D96E11;
+  border: 2px solid #D96E11; 
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.botao_enviar:hover{ 
+  background-color: white;
+  color: #D96E11;
+  font-weight: bold;
+  transition: 1s;
+  cursor: pointer;
+}
+
+/*CABEÇALHO*/
+header{
+  height: 500px;
+  background-image: url("../img/background_cabecalho.png");
+}
+
+/*CABEÇALHO - MENU*/
+#caixa_menu{
+  padding: 30px 0px 100px 100px;
+  box-sizing: border-box;
+  width: 600px;
+  height: 50px;
+  float: left;
+}
+
+#icone_menu{
+  width: 67px;
+  height: 65px;
+  background-image: url(../icones/icon_menu.png);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#menu{
+  width: 200px;
+  height: 0px;
+  visibility: hidden;
+  padding-top: 0px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+}
+
+#icone_menu:hover > #menu{
+  height: 250px;
+  visibility: visible;
+  padding-top: 65px;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#lista_menu{
+  list-style-type: none;
+}
+
+.menu_itens{
+  width: inherit;
+  height: 38px;
+  background-color: #8C4F19;
+  text-align: center;
+  padding-top: 12px;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  transition: 0.5s;
+}
+
+.menu_itens a{
+  color: white;
+  list-style: none;
+  font-weight:  bold;
+  text-decoration: none;
+}
+
+.menu_itens:hover{
+  background-color: black;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submenu{
+  width: 0px;
+  height: 0px;
+  margin-left: 200px;
+  margin-top: -41px;
+  display: none;
+  transition: 0.5s;
+}
+
+.menu_itens:hover > .submenu{
+  width: 200px;
+  display: block;
+  height: auto;
+  transition: 0.5s;
+}
+
+.submenu_itens{
+  width: inherit;
+  height: 40px;
+  margin-top: 5px;
+  background-color: black;
+  color: #ffffff;
+  list-style: none;
+  height: 38px;
+  padding-top: 12px;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.submenu_itens:hover{
+  background-color: #424242;
+  color: #ffffff;
+  cursor:pointer;
+  transition: 0.5s;
+}
+
+/*CABEÇALHO - LOGO*/
+
+.logo{
+  height: 250px;
+  width: 250px;
+  float: right;
+  border-radius: 150px;
+  margin: 30px 100px;
+}
+
+.logo img{
+  height: inherit;
+  width: inherit;
+}
+
+/*CABEÇALHO - SLOGAN*/
+
+.slogan{
+  float:right;
+  width: 650px;
+  height: 80px;
+  margin-top: 350px;
+  margin-left: 600px;
+  background-color: rgba(140, 79, 25, 0.8);
+  border-radius: 50px 0px 50px 0px;
+  position: absolute;
+}
+
+.slogan h1{
+  color: white;
+  text-align: right;
+  padding-right: 50px;
+}
+
+#seta{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  padding-top: 500px;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+#seta img{
+  width: 80px;
+  height: 80px;
+}
+
+/*SOBRE NÓS*/
+#sobre_nos{
+  margin-top: 50px;
+  height: 900px;
+}
+
+#sobre_nos h1{
+  margin-left: 100px;
+}
+
+#sobre_nos_superior,
+#sobre_nos_inferior{
+  height: 450px;
+}
+
+#sobre_nos_retrato{
+  height: 350px;
+  width: 500px;
+  margin-left: 60px; 
+  float: left;
+}
+
+#sobre_nos_retrato img{
+  height: 300px;
+  width: inherit;
+}
+
+#sobre_nos_ideias{
+  width: 400px;
+  float: right;
+  margin-right: 150px;
+}
+
+#sobre_nos_ideias p{
+  text-align: left;
+  padding: 0px;
+}
+
+#sobre_nos_lista{
+  float: left;
+  color: black;
+  margin-left: 60px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+#sobre_nos_lista li{
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+.sobre_nos_fundadores{
+  width: 280px;
+  height: 340px;
+  float: left;
+  margin-right: 70px;
+  margin-left: 150px;
+}
+
+.fundadores_imagem{
+  width: inherit;
+  height: inherit;
+  background-image: url(../img/sobrenos_fundadores.png);
+  background-size: contain;
+}
+
+.fundadores_descricao{
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  padding-top: 200px;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fundadores_imagem:hover > .fundadores_descricao{
+  visibility:visible;
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#sobre_nos_frase{
+  padding-top: 120px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+/*MISSÃO E VALORES*/
+
+#missao_valores{
+  width: 100%;
+  height: 590px;
+}
+
+.missao_valores_item{
+  width: 200px;
+  height: 550px;
+  float: left;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.missao_valores_item h2{
+  margin-left: 50px;
+}
+
+.missao_valores_item ul li{
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.missao_valores_item p{
+  text-align: center;
+}
+
+.missao_valores_item_imagem{
+  width: 180px;
+  height: 180px;
+  border-radius: 150px;
+}
+
+.missao_valores_item ul{
+  padding-bottom: 30px;
+  color: black;
+}
+
+#missao_icone{
+  background-image: url(../img/missao.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+#valores_icone{
+  background-image: url(../img/valores.jpg);
+  background-size: cover;
+  background-position: left;
+}
+
+#visao_icone{
+  background-image: url(../img/visao.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+/*CURSOS*/
+#cursos{
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/background_cursos.png);
+}
+
+#cursos_frase_caixa{
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 50px 0px;
+  margin-top: 250px;
+  margin-left: 100px;
+  height: 130px;
+  width: 600px;
+  display: inline-block;
+}
+
+#cursos_frase{
+  word-spacing: 15px;
+  font-size: 30px;
+  color: #D96E11;
+  text-align: left;
+}
+
+#cursos_frase span{
+  color: red;
+  font-weight: bold;
+}
+
+/*CURSOS - BATERIA*/
+#cursos_bateria{
+  width: 100%;
+  height: 480px;
+  background-image: url(../img/background_body.png);
+  background-color: rgba(255,255,255,0.5);
+}
+
+#cursos_bateria h1{
+  padding-left: 100px;
+  display: block;
+}
+
+#bateria_descricao,
+#bateria_imagem,
+#bateria_topicos_botao{
+  float: left;
+}
+
+#bateria_descricao{
+  width: 300px;
+  height: inherit;
+  margin: 30px 70px;
+}
+
+#bateria_descricao p{
+  text-align: left;
+}
+
+#bateria_imagem{
+  width: 500px;
+  height: inherit;
+}
+
+#bateria_imagem img{
+  width: inherit;
+  height: inherit;
+}
+
+#bateria_topicos_botao{
+  width: 200px;
+  height: 350px;
+  color: black;
+  margin: 30px 100px;
+}
+
+#bateria_topicos ul li{
+  padding-bottom: 10px;
+}
+
+#bateria_botao{
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+
+/*VIOLÃO*/
+#cursos_violao{
+  width: 100%;
+  height: 550px;
+  background-image: url(../img/background_violao.png);
+}
+
+#cursos_violao h1{
+  color: #8C4F19;
+  font-weight: bold;
+  padding-left: 750px;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+#violao_lista{
+  width: 600px;
+  float:right;
+  margin-right: 170px;
+  padding-top: 80px;
+  background-color: rgba(255,255,255,0.4);
+  width: 500px;
+  box-shadow: 10px 10px 10px 10px rgba(255,255,255,0.4);
+}
+
+#violao_lista ul li{
+  color: #8C4F19;
+  font-size: 22px;
+  margin-left: 30px;
+  padding-bottom: 40px;
+  line-height: 1;
+}
+
+#violao_botao{
+  padding-top: 320px;
+  padding-left: 140px;
+  box-sizing: border-box;
+}
+
+/*TROMPETE*/
+#cursos_trompete{
+  width: 100%;
+  height: 600px;
+  background-image: url(../img/background_body.png);
+  background-color: rgba(255,255,255,0.5);
+}
+
+#cursos_trompete h1{
+  padding-left: 100px;
+  display: block;
+}
+
+#cursos_trompete .conteudo{
+  padding-top: 20px;
+}
+
+.trompete_imagem{
+  float: left;
+  height: 400px;
+  width: 300px;
+  margin-left: 100px;
+}
+
+.trompete_imagem p{
+  padding: 5px 0px;
+}
+
+.trompete_imagem img{
+  height: inherit;
+  width: inherit;
+}
+
+#trompete_descricao_botao{
+  float: left;
+  height: 480px;
+  width: 350px;
+  margin-left: 100px;
+}
+
+#trompete_botao{
+  padding-left: 85px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+/*GUITARRA*/
+#cursos_guitarra{
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/background_guitarra.png);
+}
+
+#cursos_guitarra h1{
+  display: block;
+  margin: 30px 100px 0px 100px;
+  width: 400px;
+  color:#FFFFFF;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#guitarra_descricao{
+  width: 400px;
+  height: auto;
+  float: left;
+  background-color: rgba(0,0,0,0.5);
+  margin-left: 100px;
+}
+
+#guitarra_descricao p{
+  color: white;
+  text-align: justify;
+  line-height: 2;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#guitarra_botao{
+  float: right;
+  padding-top: 300px;
+  padding-right: 200px;
+  box-sizing: border-box;
+}
+
+/*VIOLINO*/
+#cursos_violino{
+  width: 100%;
+  height: 600px;
+  background-image: url(../img/background_body.png);
+  background-color: rgba(255,255,255,0.5);
+  padding-top: 30px;
+}
+
+#cursos_violino h1{
+  display: block;
+  margin-left: 100px;
+}
+
+#descricao_imagem_violino{
+  width: 650px;
+  height: 490px;
+  float: left;
+  margin-left: 150px;
+}
+
+#lista_violino{
+  width: 300px;
+  height: 450px;
+  float: left;
+  margin-left: 150px;
+  color: black;
+  line-height: 2.5;
+  font-size: 22px;
+  padding-top: 100px;
+}
+
+#lista_violino ul li{
+  padding-bottom: 10px;
+}
+
+#violino_imagem{
+  height: 450px;
+  width: 300px;
+  float: left;
+}
+
+#violino_imagem img{
+  width: auto;
+  height: 425px;
+}
+
+#violino_descricao_botao{
+  float: left;
+  width: 350px;
+  height: 450px;
+}
+
+#violino_descricao_botao p{
+  margin-left: 30px;
+  text-align: left;
+}
+
+#violino_botao{
+  padding-left: 100px;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+/*CANTO*/
+#cursos_canto{
+  width: 100%;
+  height: 550px;
+  background-image: url(../img/background_vocal.png);
+}
+
+#cursos_canto h1{
+  display: block;
+}
+
+#canto_descricao{
+  width: 600px;
+  height: 350px;
+  margin-top: 50px;
+  margin-left: 200px;
+  float: left;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#canto_descricao p{
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+  word-spacing: 5px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+#canto_descricao h1{
+  color: white;
+  padding-left: 30px;
+}
+
+#canto_audio_botao{
+  width: 300px;
+  height: 450px;
+  float: left;
+  margin-left: 200px;
+}
+
+#canto_botao{
+  padding-top: 320px;
+  padding-left: 50px;
+}
+
+/*TECLADO/PIANO*/
+#cursos_teclado_piano{
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/background_body.png);
+  background-color: rgba(255,255,255,0.5);
+}
+
+#cursos_teclado_piano h1{
+  display: block;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+#teclado_descricao_botao{
+  width: 500px;
+  height: 350px;
+  float: left;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+#teclado_descricao li{
+  color: black;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+#teclado_video{
+  width: 500px;
+  height: 350px;
+  float:right;
+  margin-right: 150px;
+}
+
+#teclado_video video{
+  width: 500px;
+  height: 350px;
+}
+
+#teclado_botao{
+  padding-top: 20px;
+}
+
+/*EVENTOS PRESENCIAIS*/
+#eventos{
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/background_eventos.jpg);
+}
+
+#eventos h1{
+  padding-top: 100px;
+  padding-left: 100px;
+  color: white;
+}
+
+#eventos_conteudo{
+  padding-top: 120px;
+  margin-left: 100px;
+}
+
+.eventos_recentes{
+  width: 270px;
+  height: 200px;
+  float: left;
+  margin-left: 100px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.eventos_recentes h2,
+.eventos_recentes p{
+  color: white;
+  font-weight: bold;
+}
+
+.eventos_recentes h2{
+  text-align: center;
+  width: 270px;
+}
+
+.eventos_recentes p{
+  text-align: center;
+  padding: 0px 50px;
+}
+
+/*FALE CONOSCO*/
+#fale_conosco{
+  width: 100%;
+  height: 450px;
+  background-image: url(../img/background_body.png);
+  background-color: rgba(255,255,255,0.5);
+}
+
+#fale_conosco h1{
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+#faleconosco_formulario{
+  margin-left: 150px;
+  margin-top:50px;
+}
+
+#faleconosco_dados{
+  float: left;
+  width: 200px;
+  height: 350px;
+  margin-left: 100px;
+}
+
+#faleconosco_dados input{
+  height: 35px;
+  width: 200px;
+  display: block;
+  margin: 15px 0px 20px 0px;
+}
+
+#faleconosco_formulario label{
+  font-size: 20px;
+  color:black;
+}
+
+#faleconosco_mensagem{
+  float: left;
+  height: 265px;
+  width: 300px;
+  margin-left: 100px;
+}
+
+#faleconosco_mensagem textarea{
+  display: block;
+  width: inherit;
+  height: 230px;
+  margin-top: 10px;
+}
+
+#faleconosco_botao{
+  margin-top: 200px;
+  margin-left: 80px;
+  float: left;
+}
+
+/*RODAPÉ*/
+footer{
+  width: 100%;
+  height: 320px;
+  background-color: rgba(140, 79, 25);
+}
+
+#rodape_logo{
+  float: left;
+  margin: 40px 10px 0px 90px;
+}
+
+#rodape_logo .logo{
+  margin: 0px;
+  padding: 0px;
+}
+
+#rodape_logo .logo img{
+  width: 200px;
+  height: 200px;
+}
+
+#rodape_texto{
+  width: 400px;
+  height: 150px;
+  float: left;
+  margin: 30px 50px 0px 0px;
+}
+
+#rodape_texto p{
+  color: white;
+  padding: 0px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+#rodape_redes_sociais{
+  width: 500px;
+  height: 150px;
+  float: right;
+  margin: 80px 100px 0px 0px;
+}
+
+.rodape_icones{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  float: left;
+  margin: 20px 32px;
+}
+
+#twitter, #facebook, #instagram{
+  width: inherit;
+  height: inherit;
+}
+
